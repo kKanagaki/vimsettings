@@ -12,7 +12,7 @@ alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 # macvim用に設定したが、他が調子悪かったら消してよいかも
-# http://blog.amedama.jp/entry/2015/09/15/194322
+# http://blog.amedama.jp/entry/2015/09/15/194322 -> brew install findutils
 alias xargs="gxargs"
 ```
 
