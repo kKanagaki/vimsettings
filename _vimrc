@@ -65,7 +65,8 @@ set showcmd
 set title
 " 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
 "colorscheme evening " (Windows用gvim使用時はgvimrcを編集すること)
-colorscheme mycolor
+"colorscheme mycolor
+colorscheme desert
 
 set showmatch				" 括弧の対応をハイライト
 set showcmd				" 入力中のコマンドを表示
@@ -116,6 +117,10 @@ else
 	echo 'OS_TYPE is not Darwin.'
 endif
 
+if has('mac')
+  " let g:vimproc_dll_path = $VIMRUNTIME . '/autoload/proc.so'
+  let g:vimproc_dll_path = $VIMRUNTIME . '/../plugins/vimproc/lib/vimproc_mac.so'
+endif 
 
 
 " ■プラグインの検索 
@@ -125,7 +130,7 @@ endif
 set nocompatible
 filetype off                   " (1)
 
-set rtp+=~/.vim/vundle.git/    " (2)
+set rtp+=~/.vim/bundle/vundle/    " (2)
 call vundle#rc()               " (3)
 
 " original repos on github
@@ -138,7 +143,7 @@ call vundle#rc()               " (3)
 "Bundle 'git://git.wincent.com/command-t.git'
 
 " ファイルエクスプローラーを表示する
-Bundle 'git://github.com/scrooloose/nerdtree.git'
+" Bundle 'git://github.com/scrooloose/nerdtree.git'
 
 " Trinity
 Bundle 'SrcExpl'
@@ -223,6 +228,9 @@ set keywordprg=:help
 
 " Use neocomplcache.
 let g:neocomplcache_enable_at_startup = 1
+
+
+
 
 
 
